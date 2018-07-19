@@ -1,0 +1,14 @@
+
+<%= form_tag '/search' do %>
+    <div class="row">
+        <div class="col-sm-6 offset-sm-2">
+            <div class="form-group">
+                <%= search_field_tag 'name', nil, class: 'form-control', placeholder: 'Pesquisar por Filmes' %>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <%= submit_tag "Pesquisar", class: "btn btn-primary" %>
+        </div>
+    </div>
+<% end %>
+   
