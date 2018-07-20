@@ -28,8 +28,12 @@ ActiveRecord::Schema.define(version: 2018_07_19_200528) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_orders_on_movie_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

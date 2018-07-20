@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     get 'lista_de_filmes', to: 'movies#index'
+    get 'user/:id/historico_de_pedidos', to: 'movies#history'
+    get '/user/:id/genero_preferido', to: "movies#preferences"
   end
 end
