@@ -24,7 +24,7 @@ class MoviesController < ApplicationController
     end
 
     def search
-        @movies = Movie.where('name = ?', params[:name])
+        @movies = Movie.where('lower(name) = ?', params[:name].downcase)
         render action: :results
     end
 
