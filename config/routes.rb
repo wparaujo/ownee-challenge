@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post 'search', to: 'movies#search'
   get 'results', to: 'movies#results' 
 
+  resources :users
+
   namespace :api do
     get 'lista_de_filmes', to: 'movies#index'
   end

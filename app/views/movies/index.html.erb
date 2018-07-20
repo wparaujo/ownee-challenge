@@ -1,14 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Locadora</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">Login</a>
+      <a class="nav-item nav-link" href="<%= new_user_path %>">Cadastro</a>
+    </div>
+  </div>
+</nav>
 
-<%= form_tag '/search' do %>
+<div class="container">
     <div class="row">
-        <div class="col-sm-6 offset-sm-2">
+        <div class="col-12">
+        </div>
+    </div>
+</div>
+
+<div class="container h-100">
+    <div class="row h-50 justify-content-center align-items-center">
+        <%= form_tag '/search', method: :post, class: 'col-12' do %>
             <div class="form-group">
                 <%= search_field_tag 'name', nil, class: 'form-control', placeholder: 'Pesquisar por Filmes' %>
             </div>
-        </div>
-        <div class="col-sm-2">
             <%= submit_tag "Pesquisar", class: "btn btn-primary" %>
-        </div>
+        <% end %>
     </div>
-<% end %>
+</div>
    
